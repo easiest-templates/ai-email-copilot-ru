@@ -74,7 +74,7 @@ const PricingSection = () => {
           {tiers.map((tier) => (
             <div
               key={tier.name}
-              className={`bg-card border rounded-2xl p-6 relative ${
+              className={`bg-card border rounded-2xl p-6 relative flex flex-col ${
                 tier.popular ? "border-primary shadow-lg" : "border-border"
               }`}
             >
@@ -93,7 +93,7 @@ const PricingSection = () => {
                 <p className="text-sm text-muted-foreground mt-2">{tier.description}</p>
               </div>
 
-              <div className="space-y-3 mb-6">
+              <div className="space-y-3 flex-1">
                 {tier.features.map((feature) => (
                   <div key={feature} className="flex items-center gap-3">
                     <div className="w-4 h-4 rounded-full bg-accent flex items-center justify-center">
@@ -105,7 +105,7 @@ const PricingSection = () => {
               </div>
 
               <button
-                className={`w-full py-3 rounded-full text-sm font-medium transition-colors ${
+                className={`w-full py-3 rounded-full text-sm font-medium transition-colors mt-6 ${
                   tier.popular
                     ? "bg-primary text-primary-foreground hover:bg-primary/90"
                     : "border border-border hover:bg-secondary"
